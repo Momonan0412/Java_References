@@ -12,7 +12,7 @@ public class Main {
          * THIS ERROR WHEN A USER WITH USERID DOES NOT EXIST**/
         DA.insertData(5, "hello");
         /**
-         * HOW TO HANDLE THE "tbluers" ?
+         * HOW TO HANDLE THE "tblusers" ?
          * **/
     }
 }
