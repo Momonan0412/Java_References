@@ -11,7 +11,7 @@ public class Register {
         this.userDataAccesor = userDataAccesor;
     }
     public void registerChecker(){
-        System.out.println("registerChecker Method");
+        System.out.println("registerChecker Method"); // Debugger
         this.userDataAccesor.setUser(this.user);
         this.userDataAccesor.insertData();
     }

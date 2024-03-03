@@ -7,7 +7,7 @@ package JDBC_Login_Register;
 public class MessageDataAccesssor extends AbstractDataAccessor{
 
     private final String  tableMessages = "tblmessages";
-    public MessageDataAccesssor(Object port, String databaseName) {
+    public MessageDataAccesssor(int port, String databaseName) {
         super(port, databaseName);
     }
     @Override

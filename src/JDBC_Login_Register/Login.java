@@ -10,7 +10,7 @@ public class Login {
         this.userDataAccesor = userDataAccesor;
     }
     public void loginChecker(){
-        System.out.println("loginChecker Method");
+        System.out.println("loginChecker Method"); // Debugger
         this.userDataAccesor.setUser(this.user);
         this.userDataAccesor.getData();
     }

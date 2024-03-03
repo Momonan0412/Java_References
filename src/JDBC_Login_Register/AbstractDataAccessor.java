@@ -11,14 +11,14 @@ public abstract class AbstractDataAccessor {
     private String password;
     private String query;
     public Connection con;
-    private String databaseName;
+    private int portNumber;
 
-    public AbstractDataAccessor(Object port, String databaseName){
-        this.databaseName = databaseName;
+    public AbstractDataAccessor(int portNumber, String databaseName){
         String localIpAddress = getLocalIPv4Address();
+        this.portNumber = portNumber;
 // --------------------------------------------------------------------------------------------------------------------
         /** SHOW VARIABLES LIKE "port"; -> use to show the current mysql port. **/
-        this.URL = "jdbc:mysql://localhost:" + port + "/" + databaseName;
+        this.URL = "jdbc:mysql://localhost:" + this.portNumber + "/" + databaseName;
 // --------------------------------------------------------------------------------------------------------------------
         /** Should be changed base in the device's name and password. **/
         this.name = "root";
@@ -47,7 +47,7 @@ public abstract class AbstractDataAccessor {
 // --------------------------------------------------------------------------------------------------------------------
     public abstract void insertData();
 
-    public abstract void deleteData();
+    public abstract void deleteData(); // To-do what should be the usage?
 
     public abstract void getData();
 // --------------------------------------------------------------------------------------------------------------------

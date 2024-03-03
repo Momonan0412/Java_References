@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class UserDataAccesor extends AbstractDataAccessor {
     private final String  tableUsers = "tblusers";
     User user;
-    public UserDataAccesor(Object port, String databaseName, User user) {
+    public UserDataAccesor(int port, String databaseName, User user) {
         super(port, databaseName);
         this.user = user;
     }
@@ -73,6 +73,10 @@ public class UserDataAccesor extends AbstractDataAccessor {
         } catch (SQLException e){
             e.printStackTrace();
         }
+    }
+
+    public User getUser() {
+        return user;
     }
 
     public void setUser(User user) {

@@ -8,7 +8,7 @@ public class Main {
         User user = null;
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your port number: ");
-        String portNumber = sc.nextLine();
+        int portNumber = sc.nextInt();
 //----------------------------------------------------------------------------------------------------------------------
         System.out.println("Enter username: ");
         String username = sc.nextLine();
